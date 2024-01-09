@@ -2,7 +2,7 @@
 Flutter Getx 常用功能实践.
 
  ### Examples
- ![image](https://github.com/developerjet/FlutterGetx/blob/main/ScreenShot/iPhone_01.png){:width="375px" height="660px"}
+ ![image](https://github.com/developerjet/FlutterGetx/blob/main/ScreenShot/iPhone_01.png)
 
 ### Router实践
 - 1.界面跳转

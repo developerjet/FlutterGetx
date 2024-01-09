@@ -2,8 +2,7 @@
 Flutter Getx 常用功能实践.
 
  ### Examples
- <!-- Set both width and height -->
-<img src=![image](https://github.com/developerjet/FlutterGetx/blob/main/ScreenShot/iPhone_01.png) width="300" height="200" alt="Image Alt Text">
+ ![image](https://github.com/developerjet/FlutterGetx/blob/main/ScreenShot/iPhone_01.png){:width="375px" height="660px"}
 
 ### Router实践
 - 1.界面跳转

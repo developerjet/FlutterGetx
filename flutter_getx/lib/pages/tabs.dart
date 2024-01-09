@@ -69,7 +69,6 @@ class _TabsState extends State<Tabs> {
         padding: const EdgeInsets.all(5),
         margin: const EdgeInsets.only(top: 5), //调整FloatingActionButton的位置
         decoration: BoxDecoration(
-          color: Colors.white,
           borderRadius: BorderRadius.circular(30),
         ),
         child: FloatingActionButton(

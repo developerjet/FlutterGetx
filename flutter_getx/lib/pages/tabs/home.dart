@@ -1,9 +1,9 @@
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:getx_router/controllers/counterPage.dart';
 import '../model/person.dart';
 import '../model/animal.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,11 +27,15 @@ class _HomePageState extends State<HomePage> {
 
   var animal = Animal("小猫", 5).obs;
 
+  // 实例化控制器
+  CounterController counterController = Get.find<CounterController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          SizedBox(height: 20),
           Obx(() => Text(
                 // 获取数字的变化
                 "${_counter.value}",
@@ -67,22 +71,30 @@ class _HomePageState extends State<HomePage> {
                 animal.value.usuername,
                 style: Theme.of(context).textTheme.headlineLarge,
               )),
+          SizedBox(height: 10),
+          Obx(() => Text(
+                "首页控制器计数： ${counterController.counter}",
+                style: Theme.of(context).textTheme.headlineLarge,
+              )),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
           _counter.value++;
+
           _username.value = "郭富城";
+
           _sex.value = "女";
 
           p.usuername.value = "张学友";
 
-          animal.value.usuername = "老虎";
-          animal.value =  animal.value;
+          animal.value = Animal("小狗", 6);
 
           // 增加数据
-          _list.add("Test$_counter");
+          //_list.add("Test$_counter");
+
+          counterController.inc();
         },
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+// 路由鉴权
 class AppMiddleWare extends GetMiddleware {
   @override
   RouteSettings? redirect(String? route) {

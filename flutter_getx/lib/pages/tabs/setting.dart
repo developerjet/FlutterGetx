@@ -36,7 +36,13 @@ class _SettingPageState extends State<SettingPage> {
               onPressed: () {
                 _settingTheme();
               },
-              child: Text("设置主题"))
+              child: Text("设置主题")),
+          SizedBox(height: 20),
+          ElevatedButton(
+              onPressed: () {
+                _settingLanguage();
+              },
+              child: Text("设置语言")),
         ],
       ),
     );
@@ -74,6 +80,44 @@ class _SettingPageState extends State<SettingPage> {
                     color: Get.isDarkMode ? Colors.white : Colors.black87)),
             onTap: () {
               Get.changeTheme(ThemeData.dark());
+              Get.back();
+            },
+          ),
+        ],
+      ),
+    ));
+  }
+
+  _settingLanguage() {
+    Get.bottomSheet(Container(
+      color: Get.isDarkMode ? Colors.black87 : Colors.white,
+      height: 200,
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(15),
+            child: Text("设置语言",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Get.isDarkMode ? Colors.white : Colors.black87)),
+          ),
+          ListTile(
+            title: Text("中文",
+                style: TextStyle(
+                    color: Get.isDarkMode ? Colors.white : Colors.black87)),
+            onTap: () {
+              //切换中文
+              Get.updateLocale(Locale('zh', 'CN'));
+              Get.back();
+            },
+          ),
+          ListTile(
+            title: Text("英文",
+                style: TextStyle(
+                    color: Get.isDarkMode ? Colors.white : Colors.black87)),
+            onTap: () {
+              //切换英文
+              Get.updateLocale(Locale('en', 'CN'));
               Get.back();
             },
           ),

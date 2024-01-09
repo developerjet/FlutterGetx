@@ -17,7 +17,7 @@ class SearchPage extends GetView<SearchGetxController> {
           SizedBox(height: 20),
           ElevatedButton(
               onPressed: () {
-                // 搜素数据增加
+                // 搜素数据增加 
                 controller.getHotList();
               },
               child: Text("Search内容增加")),

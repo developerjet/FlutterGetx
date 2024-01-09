@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_router/pages/tabs/home.dart';
 import 'package:getx_router/pages/tabs/category.dart';
 import 'package:getx_router/pages/tabs/message.dart';
@@ -55,14 +56,19 @@ class _TabsState extends State<Tabs> {
               _currentIndex = index;
             });
           },
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "首页"),
-            BottomNavigationBarItem(icon: Icon(Icons.category), label: "分类"),
-            BottomNavigationBarItem(icon: Icon(Icons.message), label: "消息"),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: "设置"),
-            BottomNavigationBarItem(icon: Icon(Icons.people), label: "用户")
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), label: 'tab_home_title'.tr),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.category), label: 'tab_class_title'.tr),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.message), label: 'tab_message_title'.tr),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: 'tab_setting_title'.tr),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.people), label: 'tab_user_title'.tr)
           ]),
-          //加号按钮
+      //加号按钮
       floatingActionButton: Container(
         height: 60, //调整FloatingActionButton的大小
         width: 60,

@@ -25,7 +25,7 @@ class AppPage {
       name: "/shop",
       page: () => const ShopPage(),
       binding: ShopControllerBinding(), //路由绑定
-      //middlewares: [AppMiddleWare()] //路由鉴权
+      middlewares: [AppMiddleWare()] //路由鉴权
     ),
 
     // 去登录
